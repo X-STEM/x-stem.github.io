@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: var(--MainColor);
+    font-family: 'Noto Sans', sans-serif;
+    color: white;
+    font-weight: 500;
+    z-index: 1;
+}
+
+::selection {
+    background-color: white;
+    color: var(--MainColor)
+}
+
+:root {
+    --MainColor: rgb(50, 50, 50);
+    --SecondaryColor: rgb(255, 255, 255);
+}
