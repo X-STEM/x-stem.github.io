@@ -1,6 +1,5 @@
 * {
-    margin: 0;
-    padding: 0;
+   
     background-color: var(--MainColor);
     font-family: 'Noto Sans', sans-serif;
     align-items: center;
@@ -61,7 +60,6 @@ nav a {
     margin-left: 5%;
     /*text-decoration: none;*/
     font-weight: 600;
-    color: white;
     text-align: left;   
     text-decoration: none;
     position: relative;
@@ -75,7 +73,7 @@ nav a::before {
     left: 0;
     width: 100%;
     height: 6%;
-    background: white;
+    background: rgb(0, 255, 123);
     border-radius: 100px;
     transform: scaleX(0);
     transition: transform 0.25s ease;
@@ -85,6 +83,54 @@ nav a:hover::before {
     transform: scaleX(1);
 }
 
+nav a:hover::after() {
+    color:rgb(0, 255, 123);
+}
+
+/* Main Content */
+
+h3 {
+    font-weight: 600;
+    font-size: 200%;
+    margin-bottom: 1%;
+}
+
+.meetings, .about, .competitions, .resources, .contact {
+    padding-top: 5%;
+}
+
+
+
+.competitions {
+    align-content: center;
+    
+}
+
+.competitions li {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
+    width: 20%;
+
+    background-color: rgb(45, 45, 45);
+    border: 1px rgb(255,255,255) solid;
+    border-radius: 0.5rem;
+    text-decoration: none;
+}
+
 li {
     text-align: left;
+    text-decoration: none;
+}
+
+.footer {
+    background-color: var(--SecondaryColor);
+    display: relative;
+    margin-top: 5%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.footertext p {
+    background-color: var(--SecondaryColor);
 }
