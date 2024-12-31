@@ -1,5 +1,6 @@
 * {
-   
+    margin: 0;
+    padding: 0;
     background-color: var(--MainColor);
     font-family: 'Noto Sans', sans-serif;
     align-items: center;
@@ -40,7 +41,7 @@
     text-decoration: none;
     text-align: center;
     background-color: var(--SecondaryColor);
-    width: 50%;
+    width: 45%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -52,14 +53,14 @@ nav {
     font-size: 150%;
     position: sticky;
     float: right;
-    width: 50%
+    width: 55%
 }
 
 nav a {
     background-color: var(--SecondaryColor);
     margin-left: 5%;
     /*text-decoration: none;*/
-    font-weight: 600;
+    font-weight: 700;
     text-align: left;   
     text-decoration: none;
     position: relative;
@@ -89,21 +90,60 @@ nav a:hover::after() {
 
 /* Main Content */
 
+h1 {
+    font-weight: 700;
+    font-size:250%;
+    margin-top: 3%;
+}
+
 h3 {
     font-weight: 600;
-    font-size: 200%;
+    font-size: 225%;
+    margin-bottom: 1.5%;
+}
+
+h4 {
+    font-weight: 500;
+    font-size: 120%;
+    margin-top: 1%;
     margin-bottom: 1%;
 }
 
-.meetings, .about, .competitions, .resources, .contact {
-    padding-top: 5%;
+p {
+    font-size: 110%;
 }
 
+.meetings, .about, .competitions, .resources, .contact {
+    padding-top: 4%;
+}
 
+.meetings, .about, .competitions, .resources, .contact p {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.meetings, .about, .competitions, .resources, .contact a {
+    color: rgb(0, 234, 117);
+    transition: 0.4s;
+}
+
+.about {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.about p {
+    text-align: left;
+    margin-bottom: 2%;
+}
+
+.meetings, .about, .competitions, .resources, .contact a:hover {
+    color: rgb(0, 170, 85);
+}
 
 .competitions {
     align-content: center;
-    
+
 }
 
 .competitions li {
@@ -115,20 +155,36 @@ h3 {
     background-color: rgb(45, 45, 45);
     border: 1px rgb(255,255,255) solid;
     border-radius: 0.5rem;
+    box-shadow: 13% rgb(0, 170, 85, 0);
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.competitions li:hover {
+    background-color: rgb(45, 45, 45);
+    border: 1px rgb(0,234,117) solid;
+    border-radius: 0.5rem;
+    color: rgb(0, 234, 117);
+    box-shadow: 13% rgb(0, 170, 85, 0.2);
+    text-decoration: none;
+}
+
+.competitions a {
     text-decoration: none;
 }
 
 li {
     text-align: left;
-    text-decoration: none;
+    list-style-type: none;
+
 }
 
 .footer {
     background-color: var(--SecondaryColor);
     display: relative;
-    margin-top: 5%;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    margin-top: 4%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
 }
 
 .footertext p {
