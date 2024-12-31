@@ -16,12 +16,12 @@
 }
 
 :root {
-    --MainColor: rgb(35, 35, 35);
-    --SecondaryColor: rgb(25, 25, 25);
+    --MainColor: rgb(25, 25, 25);
+    --SecondaryColor: rgb(15, 15, 15);
 }
 
 .header {
-    position: static;
+    position: sticky;
     top: 0%;
     left: 0%;
     width: 100%;
@@ -32,6 +32,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 10;
 }
 
 .title {
@@ -44,6 +45,11 @@
     width: 45%;
     margin-left: auto;
     margin-right: auto;
+    transition: 0.25s;
+}
+
+.title:hover {
+    color: rgb(0,234,117);
 }
 
 nav {
@@ -64,6 +70,7 @@ nav a {
     text-align: left;   
     text-decoration: none;
     position: relative;
+    transition: 0.25s;
 }
 
 nav a::before {
@@ -84,7 +91,7 @@ nav a:hover::before {
     transform: scaleX(1);
 }
 
-nav a:hover::after() {
+nav a:hover {
     color:rgb(0, 255, 123);
 }
 
@@ -111,6 +118,40 @@ h4 {
 
 p {
     font-size: 110%;
+}
+
+.banner {
+    margin-top: 4%;
+}
+
+.launchsb {
+    color: rgb(0, 234, 117);
+}
+
+.meetinglist {
+    display: flex;
+    width: 50%;
+}
+
+.meetinglist ul {
+    width: 100%;
+    display: flex;
+}
+
+.meetinglist li {
+    text-align: left;
+    list-style-type: none;
+    
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 1%;
+    width: 40%;
+
+    background-color: rgb(45, 45, 45);
+    border: 1px rgb(255,255,255) solid;
+    border-radius: 0.5rem;
+    box-shadow: 13% rgb(0, 170, 85, 0);
+    text-decoration: none;
 }
 
 .meetings, .about, .competitions, .resources, .contact {
@@ -147,6 +188,9 @@ p {
 }
 
 .competitions li {
+    text-align: left;
+    list-style-type: none;
+
     margin-top: 1%;
     margin-bottom: 1%;
     padding: 1%;
@@ -171,12 +215,6 @@ p {
 
 .competitions a {
     text-decoration: none;
-}
-
-li {
-    text-align: left;
-    list-style-type: none;
-
 }
 
 .footer {
