@@ -215,8 +215,10 @@ nav ul li a:focus::after {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, rgba(0,0,0,0.7) 0%, rgba(25,25,25,0.7) 100%);
+    background: linear-gradient(45deg, rgba(0,0,0,0.3) 0%, rgba(25,25,25,0.3) 100%);
     z-index: -1;
+    /* Add this line to prevent AOS animations from affecting it */
+    transition: none;
 }
 
 .hero-content {
