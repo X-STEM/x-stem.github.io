@@ -930,6 +930,210 @@ footer {
     transform: translateY(-5px);
 }
 
+/* LaunchSB Section Styles */
+.launchsb {
+    padding: 80px 0;
+    position: relative;
+}
+
+.launchsb-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 30px;
+    margin-top: 40px;
+}
+
+/* Info Cards */
+.info-card {
+    background-color: #000000;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.info-icon {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #3498db;
+    text-align: center;
+}
+
+.info-content h3 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.info-content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.info-content strong {
+    font-weight: 600;
+    color: #333;
+}
+
+/* Dress Code Styles */
+.dress-code-examples {
+    margin-top: 15px;
+}
+
+.dress-code-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    background-color: #f5f9ff;
+    border-radius: 6px;
+}
+
+.dress-code-option i {
+    margin-right: 10px;
+    color: #2ecc71;
+    font-size: 1.1rem;
+}
+
+.dress-code-option.not-allowed i {
+    color: #e74c3c;
+}
+
+.dress-code-option span {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* Pitch Requirements */
+.pitch-requirements ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 10px;
+}
+
+.pitch-requirements li {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 0.95rem;
+}
+
+.pitch-requirements li i {
+    color: #2ecc71;
+    margin-right: 8px;
+    font-size: 0.9rem;
+}
+
+/* Important Links */
+.important-links {
+    margin-top: 15px;
+}
+
+.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3498db;
+    color: white;
+    padding: 12px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.link-button:hover {
+    background-color: #2980b9;
+    text-decoration: none;
+    color: white;
+}
+
+.link-button i {
+    margin-right: 10px;
+}
+
+/* Info List */
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-list li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.info-list li:before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #3498db;
+    font-weight: bold;
+}
+
+/* Tags */
+.tag {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.required-tag {
+    background-color: #ff7675;
+    color: white;
+}
+
+/* Note Emphasis */
+.note.emphasis {
+    background-color: #fdcb6e;
+    border-left: 4px solid #e17055;
+}
+
+.note.emphasis i {
+    color: #e17055;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .launchsb-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .pitch-requirements ul {
+        grid-template-columns: 1fr;
+    }
+    
+    .info-card {
+        padding: 20px;
+    }
+}
+
+
+
+
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
     .hero-content h1 {
