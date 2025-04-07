@@ -5,123 +5,394 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="main.js"></script>
+    <script src="main.js" defer></script>
     <link rel="icon" type="image" href="assets/favicon.jpg">
-    <!-- Noto Sans -- May switch later -->
+    <!-- Google Fonts - Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
-        <a href="#home" class="navtitle">XSTEM</a>
-        <nav>
-            <a href="#meetings">Meetings</a>
-            <a href="#about">What is XSTEM?</a>
-            <a href="#competitions">Competitions</a>
-            <a href="#resources">Resources</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
+    <header>
+        <div class="container">
+            <a href="#home" class="logo">XSTEM</a>
+            <div class="hamburger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#meetings" class="nav-link">Meetings</a></li>
+                    <li><a href="#about" class="nav-link">What is XSTEM?</a></li>
+                    <li><a href="#competitions" class="nav-link">Competitions</a></li>
+                    <li><a href="#resources" class="nav-link">Resources</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div id="home" class="home">
-        <!-- <h1>Welcome to the Official XSTEM Website!</h1> -->
-        <img src="assets/1.jpg" alt="Unable to show image." class="banner-img">
-        <div class="home-text">
-            <h1 class="title">SBHS XSTEM</h1>
-            <p class="home-msg">Unlock your business potential.</p>
+    <section id="home" class="hero">
+        <div class="overlay"></div>
+        <video autoplay muted loop id="hero-video">
+            <source src="assets/hero-bg.mp4" type="video/mp4">
+            <!-- Fallback image if video doesn't load -->
+            <img src="assets/1.jpg" alt="XSTEM Banner">
+        </video>
+        <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="" data-text="SBHS XSTEM">SBHS XSTEM</h1>
+            <p class="subtitle">Unlock your business potential</p>
+            <a href="#meetings" class="cta-button">Explore <i class="fas fa-arrow-right"></i></a>
         </div>
-        <div>
-            <a href="#meetings" class="down-btn-green"><img src="assets/arrow-down-circle-green.svg" alt="Unable to display image." class="next-section"></a>
-            <a href="#meetings" class="down-btn"><img src="assets/arrow-down-circle.svg" alt="Unable to display image." class="next-section"></a>
+        <div class="scroll-indicator">
+            <a href="#meetings">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                </div>
+            </a>
         </div>
-    </div>
+    </section>
     
-    <div id="meetings" class="meetings">
-        <h3>Meetings</h3>
-        <p>Here is a list of our meeting dates for the 2024-25 school year.</p>
-        <div class="meetinglist">
-            <div>October 8th, 2024</div>
-            <div>October 22nd, 2024</div>
-            <div>November 12th, 2024</div>
-            <div>November 26th, 2024</div>
-            <div>December 10th, 2024</div>
-            <div>January 7th, 2025</div>
-            <div>January 21st, 2025</div>
-            <div>February 4th, 2025</div>
-            <div>February 18th, 2025</div>
-            <div>March 4th, 2025</div>
-            <div>March 18th, 2025</div>
-            <div>April 1st, 2025</div>
-            <div>April 22nd, 2025</div>
-            <div class="launchsb">LaunchSB - April 26th, 2025</div>
-        </div>
-        <p>Note: You must attend at least 50% of meetings to gain club credit!</p>
-    </div>
-
-    <div id="about" class="about">
-        
-        <div class="abt-content">
-            <div class="left-abt">
-                <h3>What is XSTEM?</h3>
-                <p>XSTEM is a club where students work together to create their own companies and compete to win prizes at the regional, national, and international level! Through this club students will learn a MIT based curriculum to develop their companies and gain valuable knowledge from their mentors.<br></p>
-                <p>Our meetings take place in the DLC (3rd Floor Annex) on Tuesdays until 4:00 PM.</p>
+    <section id="meetings" class="meetings">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Meetings</h2>
+                <div class="underline"></div>
             </div>
-            <div class="right-abt">
-                <img src="assets/2.png" class="abt-img">
+            <p data-aos="fade-up" data-aos-delay="100">Here is a list of our meeting dates for the 2024-25 school year.</p>
+            
+            <div class="meeting-calendar" data-aos="fade-up" data-aos-delay="200">
+                <div class="meeting-card">
+                    <div class="meeting-date">
+                        <span class="month">OCT</span>
+                        <span class="day">8</span>
+                        <span class="year">2024</span>
+                    </div>
+                </div>
+                <div class="meeting-card">
+                    <div class="meeting-date">
+                        <span class="month">OCT</span>
+                        <span class="day">22</span>
+                        <span class="year">2024</span>
+                    </div>
+                </div>
+                <div class="meeting-card">
+                    <div class="meeting-date">
+                        <span class="month">NOV</span>
+                        <span class="day">12</span>
+                        <span class="year">2024</span>
+                    </div>
+                </div>
+                <div class="meeting-card">
+                    <div class="meeting-date">
+                        <span class="month">NOV</span>
+                        <span class="day">26</span>
+                        <span class="year">2024</span>
+                    </div>
+                </div>
+                <div class="meeting-card">
+                    <div class="meeting-date">
+                        <span class="month">DEC</span>
+                        <span class="day">10</span>
+                        <span class="year">2024</span>
+                    </div>
+                </div>
+                <div class="meeting-card">
+                    <div class="meeting-date">
+                        <span class="month">JAN</span>
+                        <span class="day">7</span>
+                        <span class="year">2025</span>
+                    </div>
+                </div>
+                <div class="meeting-card">
+                    <div class="meeting-date">
+                        <span class="month">JAN</span>
+                        <span class="day">21</span>
+                        <span class="year">2025</span>
+                    </div>
+                </div>
+                <div class="meeting-card">
+                    <div class="meeting-date">
+                        <span class="month">FEB</span>
+                        <span class="day">4</span>
+                        <span class="year">2025</span>
+                    </div>
+                </div>
+                <div class="meeting-card">
+                    <div class="meeting-date">
+                        <span class="month">FEB</span>
+                        <span class="day">18</span>
+                        <span class="year">2025</span>
+                    </div>
+                </div>
+                <div class="meeting-card">
+                    <div class="meeting-date">
+                        <span class="month">MAR</span>
+                        <span class="day">4</span>
+                        <span class="year">2025</span>
+                    </div>
+                </div>
+                <div class="meeting-card">
+                    <div class="meeting-date">
+                        <span class="month">MAR</span>
+                        <span class="day">18</span>
+                        <span class="year">2025</span>
+                    </div>
+                </div>
+                <div class="meeting-card">
+                    <div class="meeting-date">
+                        <span class="month">APR</span>
+                        <span class="day">1</span>
+                        <span class="year">2025</span>
+                    </div>
+                </div>
+                <div class="meeting-card">
+                    <div class="meeting-date">
+                        <span class="month">APR</span>
+                        <span class="day">22</span>
+                        <span class="year">2025</span>
+                    </div>
+                </div>
+                <div class="meeting-card special">
+                    <div class="meeting-date">
+                        <span class="event">LaunchSB</span>
+                        <span class="day">26</span>
+                        <span class="month">APR</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="note" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>Note: You must attend at least 50% of meetings to gain club credit!</p>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div id="competitions" class="competitions">
-        <h3>Competitions</h3>
-        <p>Here are some of the competitions your team can apply to!</p>
-        <div class="competition-header">
-            <div class="top">Competition</div>
-            <div class="top">Members</div>
-            <div class="top">Deadline</div>
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>What is XSTEM?</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text" data-aos="fade-right" data-aos-delay="100">
+                    <p>XSTEM is a club where students work together to create their own companies and compete to win prizes at the regional, national, and international level! Through this club students will learn a MIT based curriculum to develop their companies and gain valuable knowledge from their mentors.</p>
+                    <p>Our meetings take place in the DLC (3rd Floor Annex) on Tuesdays until 4:00 PM.</p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Innovation</h3>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-users"></i>
+                            <h3>Collaboration</h3>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Growth</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image" data-aos="fade-left" data-aos-delay="200">
+                    <img src="assets/2.png" alt="XSTEM Students">
+                    <div class="image-caption">
+                        <span>Building tomorrow's entrepreneurs</span>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="competition-list">
-            <div><a href="https://innovation.nfte.com/" target="_blank">NFTE World Series of Innovation</a></div>
-            <div>1 - 4 Members</div>
-            <div>Submit by Dec 8th</div>
-            <div><a href="https://events.morriscountyalliance.org/PitchNJ2024Contest" target="_blank">Pitch NJ</a></div>
-            <div>1 - 4 Members</div>
-            <div>Submit by Dec 14th</div>
-            <div><a href="https://solve.mit.edu/" target="_blank">MIT Solve</a></div>
-            <div>No Limit</div>
-            <div>Submit by Jan 8th</div>
-            <div><a href="https://diamondchallenge.org/" target="_blank">Diamond Challenge</a></div>
-            <div>2 - 4 Members</div>
-            <div>Submit by Jan 16th</div>
-            <div><a href="https://www.nationalgeographic.org/society/projects/slingshot/" target="_blank">National Geographic Slingshot Challenge</a></div>
-            <div>1 - 6 Members</div>
-            <div>Submit by Feb 7th</div>
-            <div><a href="https://blueoceancompetition.org/" target="_blank">Blue Ocean</a></div>
-            <div>2 - 4 Members</div>
-            <div>Submit by Feb 16th</div>  
-            <div><a href="https://blueoceancompetition.org/" target="_blank">Global Youth Entrepreneurship Challenge</a></div>
-            <div>3 - 8 Members</div>
-            <div>Submit by Mar 21st</div> 
+    </section>
+
+    <section id="competitions" class="competitions">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Competitions</h2>
+                <div class="underline"></div>
+            </div>
+            <p data-aos="fade-up" data-aos-delay="100">Here are some of the competitions your team can apply to!</p>
+            
+            <div class="competition-filter" data-aos="fade-up" data-aos-delay="150">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="upcoming">Upcoming</button>
+                <button class="filter-btn" data-filter="international">International</button>
+            </div>
+            
+            <div class="competition-cards" data-aos="fade-up" data-aos-delay="200">
+                <div class="competition-card">
+                    <div class="competition-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="competition-info">
+                        <h3><a href="https://innovation.nfte.com/" target="_blank">NFTE World Series of Innovation</a></h3>
+                        <div class="competition-details">
+                            <div class="detail"><i class="fas fa-users"></i> 1 - 4 Members</div>
+                            <div class="detail"><i class="fas fa-calendar-alt"></i> Submit by Dec 8th</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="competition-card">
+                    <div class="competition-icon">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                    <div class="competition-info">
+                        <h3><a href="https://events.morriscountyalliance.org/PitchNJ2024Contest" target="_blank">Pitch NJ</a></h3>
+                        <div class="competition-details">
+                            <div class="detail"><i class="fas fa-users"></i> 1 - 4 Members</div>
+                            <div class="detail"><i class="fas fa-calendar-alt"></i> Submit by Dec 14th</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="competition-card">
+                    <div class="competition-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="competition-info">
+                        <h3><a href="https://solve.mit.edu/" target="_blank">MIT Solve</a></h3>
+                        <div class="competition-details">
+                            <div class="detail"><i class="fas fa-users"></i> No Limit</div>
+                            <div class="detail"><i class="fas fa-calendar-alt"></i> Submit by Jan 8th</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="competition-card">
+                    <div class="competition-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="competition-info">
+                        <h3><a href="https://diamondchallenge.org/" target="_blank">Diamond Challenge</a></h3>
+                        <div class="competition-details">
+                            <div class="detail"><i class="fas fa-users"></i> 2 - 4 Members</div>
+                            <div class="detail"><i class="fas fa-calendar-alt"></i> Submit by Jan 16th</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="competition-card">
+                    <div class="competition-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="competition-info">
+                        <h3><a href="https://www.nationalgeographic.org/society/projects/slingshot/" target="_blank">National Geographic Slingshot Challenge</a></h3>
+                        <div class="competition-details">
+                            <div class="detail"><i class="fas fa-users"></i> 1 - 6 Members</div>
+                            <div class="detail"><i class="fas fa-calendar-alt"></i> Submit by Feb 7th</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="competition-card highlighted">
+                    <div class="competition-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <div class="competition-info">
+                        <h3><a href="https://blueoceancompetition.org/" target="_blank">Blue Ocean</a></h3>
+                        <div class="competition-details">
+                            <div class="detail"><i class="fas fa-users"></i> 2 - 4 Members</div>
+                            <div class="detail"><i class="fas fa-calendar-alt"></i> Submit by Feb 16th</div>
+                        </div>
+                        <div class="required-badge">Required</div>
+                    </div>
+                </div>
+                
+                <div class="competition-card">
+                    <div class="competition-icon">
+                        <i class="fas fa-globe-americas"></i>
+                    </div>
+                    <div class="competition-info">
+                        <h3><a href="https://blueoceancompetition.org/" target="_blank">Global Youth Entrepreneurship Challenge</a></h3>
+                        <div class="competition-details">
+                            <div class="detail"><i class="fas fa-users"></i> 3 - 8 Members</div>
+                            <div class="detail"><i class="fas fa-calendar-alt"></i> Submit by Mar 21st</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="note" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-exclamation-circle"></i>
+                <p>Note: Blue Ocean is a required competition for club credit!</p>
+            </div>
         </div>
-        <p>Note: Blue Ocean is a required competition for club credit!</p>
-    </div>
+    </section>
 
-    <div id="resources" class="resources">
-        <h3>Resources</h3>
-        <p>Resources will be added soon!</p> <!-- Add in list format probably-->
-    </div>
-
-    <div id="contact" class="contact">
-        <h3>Contact</h3>
-        <h4>Feel free to contact us!</h4>
-        <h4><a href="https://mailto:southbrunswickxstem@gmail.com" target="_blank">southbrunswickxstem@gmail.com</a></h4>
-    </div>
-
-    <div class="footer">
-        <div class="footertext">
-            <p>&copy;2025 SBHS XSTEM. All Rights Reserved.</p>
+    <section id="resources" class="resources">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Resources</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="resources-coming-soon" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-tools"></i>
+                <p>Resources will be added soon!</p>
+                <div class="loader">
+                    <div class="loader-bar"></div>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Contact</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="contact-content" data-aos="fade-up" data-aos-delay="100">
+                <h3>Feel free to contact us!</h3>
+                <a href="mailto:southbrunswickxstem@gmail.com" class="email-link">
+                    <i class="fas fa-envelope"></i>
+                    <span>southbrunswickxstem@gmail.com</span>
+                </a>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#home">XSTEM</a>
+                </div>
+                <div class="footer-nav">
+                    <a href="#meetings">Meetings</a>
+                    <a href="#about">About</a>
+                    <a href="#competitions">Competitions</a>
+                    <a href="#resources">Resources</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 SBHS XSTEM. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#home" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- AOS Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </body>
 </html>
