@@ -12,6 +12,49 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger-menu');
     const nav = document.querySelector('nav');
     
+
+    document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS animation
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease',
+            once: true,
+            offset: 100
+        });
+    }
+    
+    // Add hover effect to resource items
+    const resourceItems = document.querySelectorAll('.resource-item');
+    resourceItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            const icon = this.querySelector('.resource-icon i');
+            icon.classList.add('pulse-effect');
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            const icon = this.querySelector('.resource-icon i');
+            icon.classList.remove('pulse-effect');
+        });
+    });
+    
+    // Add category expansion/collapse functionality (for mobile)
+    const categoryHeaders = document.querySelectorAll('.category-header');
+    categoryHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                const category = this.parentElement;
+                const items = category.querySelector('.resource-items');
+                
+                if (items.style.maxHeight) {
+                    items.style.maxHeight = null;
+                } else {
+                    items.style.maxHeight = items.scrollHeight + 'px';
+                }
+            }
+        });
+    });
+});
     hamburger.addEventListener('click', function() {
         this.classList.toggle('menu-open');
         nav.classList.toggle('active');
@@ -246,5 +289,48 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS animation
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease',
+            once: true,
+            offset: 100
+        });
+    }
+    
+    // Add hover effect to resource items
+    const resourceItems = document.querySelectorAll('.resource-item');
+    resourceItems.forEach(item => {
+        item.addEventListener('mouseenter', function() {
+            const icon = this.querySelector('.resource-icon i');
+            icon.classList.add('pulse-effect');
+        });
+        
+        item.addEventListener('mouseleave', function() {
+            const icon = this.querySelector('.resource-icon i');
+            icon.classList.remove('pulse-effect');
+        });
+    });
+    
+    // Add category expansion/collapse functionality (for mobile)
+    const categoryHeaders = document.querySelectorAll('.category-header');
+    categoryHeaders.forEach(header => {
+        header.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                const category = this.parentElement;
+                const items = category.querySelector('.resource-items');
+                
+                if (items.style.maxHeight) {
+                    items.style.maxHeight = null;
+                } else {
+                    items.style.maxHeight = items.scrollHeight + 'px';
+                }
+            }
+        });
     });
 });
