@@ -334,3 +334,67 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const banner = document.getElementById('announcement-banner');
+    const body = document.body;
+    
+    const bannerClosed = localStorage.getItem('xstem-banner-closed');
+    const bannerVersion = localStorage.getItem('xstem-banner-version');
+    
+    const currentBannerVersion = '1.0';
+    
+    if (!bannerClosed || bannerVersion !== currentBannerVersion) {
+        showBanner();
+    }
+    
+    function showBanner() {
+        banner.classList.add('show');
+        body.classList.add('banner-active');
+        
+        setTimeout(() => {
+            if (banner.classList.contains('show')) {
+                hideBanner();
+            }
+        }, 15000);
+    }
+    
+    function hideBanner() {
+        banner.classList.remove('show');
+        body.classList.remove('banner-active');
+    }
+});
+
+function closeAnnouncement() {
+    const banner = document.getElementById('announcement-banner');
+    const body = document.body;
+    
+    banner.classList.remove('show');
+    body.classList.remove('banner-active');
+    
+    localStorage.setItem('xstem-banner-closed', 'true');
+    localStorage.setItem('xstem-banner-version', '1.0');
+}
+
+function showAnnouncement(message, type = 'default', duration = 15000) {
+    const banner = document.getElementById('announcement-banner');
+    const textElement = banner.querySelector('.announcement-text');
+    const body = document.body;
+    
+    banner.classList.remove('urgent', 'info', 'success', 'warning');
+    
+    if (type !== 'default') {
+        banner.classList.add(type);
+    }
+    
+    textElement.innerHTML = message;
+    
+    banner.classList.add('show');
+    body.classList.add('banner-active');
+    
+    if (duration > 0) {
+        setTimeout(() => {
+            banner.classList.remove('show');
+            body.classList.remove('banner-active');
+        }, duration);
+    }
+}
