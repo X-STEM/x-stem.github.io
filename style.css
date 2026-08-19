@@ -46,6 +46,99 @@ html {
     font-size: 16px;
 }
 
+.alumni-section {
+    padding: 28px 0;
+    background: #ffffff;
+    text-align: center;
+    overflow: hidden;
+    border-top: 1px solid rgba(0,0,0,0.07);
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+
+.alumni-section h3 {
+    margin-bottom: 20px;
+    color: rgba(0,0,0,0.32);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    font-family: var(--font-body);
+}
+
+.alumni-marquee-wrapper {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.alumni-marquee-wrapper::before,
+.alumni-marquee-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.alumni-marquee-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #ffffff, transparent);
+}
+
+.alumni-marquee-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #ffffff, transparent);
+}
+
+.alumni-marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 52px;
+    width: max-content;
+    padding: 8px 26px;
+    animation: marquee-scroll 35s linear infinite;
+}
+
+.alumni-marquee-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee-scroll {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.alogo {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 400;
+    font-style: italic;
+    white-space: nowrap;
+    flex-shrink: 0;
+    opacity: 0.65;
+    transition: opacity 0.25s ease;
+    cursor: default;
+    letter-spacing: -0.3px;
+}
+
+.alogo:hover { opacity: 1; }
+
+.alogo.upenn      { color: #011F5B; }
+.alogo.cmu        { color: #C41230; }
+.alogo.cornell    { color: #B31B1B; }
+.alogo.uchicago   { color: #800000; }
+.alogo.gatech     { color: #B3A369; }
+.alogo.utaustin   { color: #BF5700; }
+.alogo.michigan   { color: #00274C; }
+.alogo.northeastern { color: #C8102E; }
+.alogo.uiuc       { color: #13294B; }
+.alogo.ucla       { color: #2774AE; }
+.alogo.umd        { color: #E03A3E; }
+.alogo.purdue     { color: #CEB888; }
+.alogo.rutgers    { color: #CC0033; }
+
 body {
     font-family: var(--font-body);
     background-color: var(--background-white);
@@ -1054,7 +1147,7 @@ footer {
 
 .page-banner {
     background: var(--primary-gradient);
-    padding: 200px 0 110px;
+    padding: 200px 0 60px;
     text-align: center;
     color: white;
     position: relative;
@@ -1097,10 +1190,9 @@ footer {
 }
 
 .overlapping-content {
-    margin-top: -70px;
+    margin-top: 0;
     position: relative;
     z-index: 10;
-    padding-bottom: var(--spacing-lg);
 }
 
 
@@ -1137,46 +1229,6 @@ footer {
     font-size: 1.5rem;
     margin-bottom: var(--spacing-sm);
 }
-
-
-.alumni-section {
-    padding: var(--spacing-lg) 0;
-    background: var(--secondary-color);
-    text-align: center;
-}
-
-.alumni-section h3 {
-    margin-bottom: var(--spacing-md);
-    color: rgba(255, 255, 255, 0.55);
-    font-size: 0.82rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 500;
-    font-family: var(--font-body);
-}
-
-.alumni-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: var(--spacing-lg);
-    align-items: center;
-}
-
-.alumni-logo {
-    font-family: var(--font-heading);
-    font-weight: 400;
-    font-style: italic;
-    font-size: 1.6rem;
-    color: rgba(255, 255, 255, 0.45);
-    transition: var(--transition);
-    cursor: default;
-}
-
-.alumni-logo:hover {
-    color: rgba(255, 255, 255, 0.9);
-}
-
 
 .faq-section {
     padding: var(--spacing-lg) 0;
